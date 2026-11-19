@@ -100,7 +100,7 @@ export const classes: SchoolClass[] = [
     status: "ongoing",
     schedule: "Monday, Wednesday, Friday • 6:30 PM - 8:00 PM",
     duration: "10 weeks",
-    fee: "$120",
+    fee: "100,000 MMK",
     startDate: "Feb 15",
     image: "/images/viber_image_2026-03-01_11-11-20-303.jpg",
     description:
@@ -130,7 +130,7 @@ export const classes: SchoolClass[] = [
     status: "upcoming",
     schedule: "Saturday, Sunday • 7:00 PM - 9:00 PM",
     duration: "12 weeks",
-    fee: "$180",
+    fee: "220,000 MMK",
     startDate: "Mar 7",
     image: "/images/viber_image_2026-03-01_11-11-23-139.jpg",
     description:
@@ -160,7 +160,7 @@ export const classes: SchoolClass[] = [
     status: "upcoming",
     schedule: "Tuesday, Thursday • 4:30 PM - 6:00 PM",
     duration: "8 weeks",
-    fee: "$95",
+    fee: "150,000 MMK",
     startDate: "Mar 14",
     image: "/images/viber_image_2026-03-01_11-11-26-623.jpg",
     description:

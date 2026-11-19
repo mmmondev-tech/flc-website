@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* FLC brand palette — navy & red from the logo, warm gold accent, cream paper. */
+@theme {
+  --color-brand-50: #f1f5fc;
+  --color-brand-100: #e1e9f7;
+  --color-brand-200: #c3d3ee;
+  --color-brand-500: #2f62b3;
+  --color-brand-600: #24539c;
+  --color-brand-700: #1b4282;
+  --color-brand-800: #132f60;
+  --color-brand-900: #0b1e43;
+  --color-brand-950: #071431;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-gold-100: #f7eedb;
+  --color-gold-200: #eedcb2;
+  --color-gold-400: #d8b56f;
+  --color-gold-500: #c9a14f;
+  --color-gold-600: #ad853a;
+  --color-gold-700: #8a682b;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-coral-500: #d9473f;
+
+  --color-cream: #fbf8f1;
+  --color-sand: #f3ecdc;
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
+@theme inline {
+  --font-sans: var(--font-jakarta), "Noto Sans Myanmar", "Myanmar Text",
+    ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: #1e293b;
+  overflow-x: clip;
+}
+
+/* Myanmar script needs extra line height to keep stacked glyphs readable. */
+.mm {
+  line-height: 1.9;
+}
+
+/* Subtle dotted texture used on dark sections. */
+.dot-grid {
+  background-image: radial-gradient(
+    rgb(255 255 255 / 0.12) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
